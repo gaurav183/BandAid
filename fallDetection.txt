@@ -1,0 +1,22 @@
+Basic Fall Detection Algorithm: 
+   - take (x,y,z) coordinates of acceleration from accelerometer and angular     velocity
+   - a = sqrt(x^2 + y^2 + z^2) m/s
+   - g = sqrt(x^2 + y^2 + z^2) °/sec
+   - n = length of time segment
+   - [a_1, a_2, a_3,....a_n] = accelerations over time segment
+   - a_max = max[a_1,a_2,...a_n]
+   - a_min = min[a_1,a_2,...a_n]
+   - g_max = max[g_1,g_2,...g_n]
+   - g_min = min[g_1,g_2,...g_n]
+   - theta = arccos(a/g)
+   (1) Monitor if people are static or dynamic during the
+   present time segment.
+        if ((a_max - a_min) < 0.4g) || ((g_max - g_min) < 60°/sec) THEN
+   (2) Recognize the present static posture. Is it lying?
+        if (theta > 35°) THEN
+   (3) Determine if the transition before the present lying posture is intentional.
+        if (a_max > T_a) || (g_max > T_w) then YES
+        else NO
+
+
+source: http://www.cs.wm.edu/~gzhou/files/falldetection-bsn09.pdf
