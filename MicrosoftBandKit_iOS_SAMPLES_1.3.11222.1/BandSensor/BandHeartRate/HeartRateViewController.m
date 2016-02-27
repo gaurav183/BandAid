@@ -87,7 +87,7 @@
         weakSelf.hrLabel.text = [NSString stringWithFormat:@"Heart Rate: %3u %@",
                                  (unsigned int)heartRateData.heartRate,
                                  heartRateData.quality == MSBSensorHeartRateQualityAcquiring ? @"Acquiring" : @"Locked"];
-        NSLog(@"%@", heartRateData);
+        NSLog(@"%@", weakSelf.hrLabel.text);
     };
     
     NSError *stateError;

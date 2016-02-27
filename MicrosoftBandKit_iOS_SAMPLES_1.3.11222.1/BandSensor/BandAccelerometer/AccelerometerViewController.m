@@ -70,6 +70,7 @@
                                     accelerometerData.x,
                                     accelerometerData.y,
                                     accelerometerData.z];
+        NSLog(weakSelf.accelLabel.text);
     };
     
     NSError *stateError;
