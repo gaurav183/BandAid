@@ -1,0 +1,9 @@
+Basic Fall Detection Algorithm: 
+   - take (x,y,z) coordinates of acceleration from accelerometer
+   - a_detected = sqrt(x^2 + y^2 + z^2) m/s
+   - a_gravity = 9.8 m/s
+   - a_threshold = 2g (can edit this)
+   for (int i = 0; i < 10; i++)
+       if (a_total - a_gravity) < a_thresh
+           do something
+       
